@@ -5,10 +5,17 @@ const ResultContext = createContext();
 const apiUrl = 'https://google-search3.p.rapidapi.com/api/v1';
 const apiKey = '65b9727b4cmshb9aaaffc5e204e3p16c0a1jsn32d97d4f188e';
 
+const responseTypeMap = {
+    search: 'results',
+    image: 'image_results',
+    news: 'entries',
+    video: 'results',
+};
+
 export const ResultContextProvider = ({ children }) => {
     const [results, setResults] = useState([]);
     const [loading, setLoading] = useState(false);
-    const [searchTerm, setSearchTerm] = useState('js mastery');
+    const [searchTerm, setSearchTerm] = useState('javascript');
 
     // type: 'search' | 'images' | 'news' | 'videos'
     const fetchResults = async (query, type = 'search') => {
@@ -24,7 +31,7 @@ export const ResultContextProvider = ({ children }) => {
 
         const data = await response.json();
 
-        setResults(type === 'image' ? data.image_results :  data.results);
+        setResults(data[responseTypeMap[type]]);
         setLoading(false);
     };
 

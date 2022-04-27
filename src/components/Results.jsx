@@ -59,7 +59,33 @@ export const Results = () => {
             );
 
         case '/news':
-            return 'News...';
+            return (
+                <div className="flex flex-wrap justify-center spae-y-6 sm:px-56">
+                    {results?.map(({ link, id, source, title }, index) => (
+                        <div className="md:w-2/5 w-full" key={index}>
+                            <a
+                                href={link}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="hover:underline"
+                            >
+                                <p className="text-lg dark:text-blue-300 text-blue-700">
+                                    {title}
+                                </p>
+                                <div className="flex gap-4">
+                                    <a
+                                        href={source?.href}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        {source?.href}
+                                    </a>
+                                </div>
+                            </a>
+                        </div>
+                    ))}
+                </div>
+            );
 
         case '/video':
             return 'Videos...';
