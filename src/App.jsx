@@ -1,6 +1,6 @@
 import { useState } from 'react';
+import { Outlet } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
-import { Routes } from './components/Routes';
 import { Footer } from './components/Footer';
 
 export const App = () => {
@@ -10,7 +10,7 @@ export const App = () => {
         <div className={darkTheme ? 'dark' : ''}>
             <div className="dark:bg-gray-900 bg-gray-100 dark:text-gray-200 min-h-screen">
                 <Navbar darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
-                <Routes />
+                <Outlet />
                 <Footer />
             </div>
         </div>
