@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-// import ReactPlayer from 'react-player';
+import ReactPlayer from 'react-player';
 import { useResultContext } from '../context/ResultContextProvider';
 import { Loading } from './Loading';
 
@@ -72,23 +72,36 @@ export const Results = () => {
                                 <p className="text-lg dark:text-blue-300 text-blue-700">
                                     {title}
                                 </p>
-                                <div className="flex gap-4">
-                                    <a
-                                        href={source?.href}
-                                        target="_blank"
-                                        rel="noreferrer"
-                                    >
-                                        {source?.href}
-                                    </a>
-                                </div>
                             </a>
+                            <div className="flex gap-4">
+                                <a
+                                    href={source?.href}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    {source?.href}
+                                </a>
+                            </div>
                         </div>
                     ))}
                 </div>
             );
 
         case '/video':
-            return 'Videos...';
+            return (
+                <div className="flex flex-wrap">
+                    {results?.map(({ link }, index) => (
+                        <div className="p-2" key={index}>
+                            <ReactPlayer
+                                url={link}
+                                controls
+                                width="335px"
+                                height="200px"
+                            />
+                        </div>
+                    ))}
+                </div>
+            );
 
         default:
             return 'error...';

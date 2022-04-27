@@ -15,13 +15,14 @@ const responseTypeMap = {
 export const ResultContextProvider = ({ children }) => {
     const [results, setResults] = useState([]);
     const [loading, setLoading] = useState(false);
-    const [searchTerm, setSearchTerm] = useState('javascript');
+    const [searchTerm, setSearchTerm] = useState('trump');
 
     // type: 'search' | 'images' | 'news' | 'videos'
     const fetchResults = async (query, type = 'search') => {
         setLoading(true);
 
-        const response = await fetch(`${apiUrl}/${type}/q=${query}`, {
+
+        const response = await fetch(`${apiUrl}/${type}/q=${encodeURIComponent(query)}`, {
             method: 'GET',
             headers: {
                 'X-RapidAPI-Host': 'google-search3.p.rapidapi.com',
