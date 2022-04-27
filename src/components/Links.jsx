@@ -14,7 +14,13 @@ export const Links = () => {
                 <NavLink
                     key={index}
                     to={url}
-                    className="text-blue-700 dark:text-blue-300 border-b-2 hover:border-blue-700 pb-2 mx-2"
+                    className={({ isActive }) => {
+                        const classes =
+                            ' dark:text-blue-300 border-b-2 hover:border-blue-700 pb-2 m-2 mb-0';
+                        return isActive
+                            ? `${classes} border-blue-700`
+                            : classes;
+                    }}
                 >
                     {text}
                 </NavLink>
