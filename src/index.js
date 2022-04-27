@@ -15,7 +15,7 @@ root.render(
                     {/* parent route (as layout) */}
                     <Route path="/" element={<App />}>
                         {/* child routes */}
-                        {['/search', '/images', '/news', '/videos'].map(
+                        {['/search', '/image', '/news', '/video'].map(
                             (path) => (
                                 <Route
                                     path={path}
