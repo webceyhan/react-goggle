@@ -9,7 +9,7 @@ export const App = () => {
     return (
         <div className={darkTheme ? 'dark' : ''}>
             <div className="bg-gray-100 dark:bg-gray-200 dark:text-gray-900 min-h-screen">
-                <Navbar />
+                <Navbar darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
                 <Routes />
                 <Footer />
             </div>
