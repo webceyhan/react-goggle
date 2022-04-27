@@ -49,7 +49,7 @@ export const Results = () => {
                             target="_blank"
                             rel="noreferrer"
                         >
-                            <img src={image.src} alt={title} loading="lazy" />
+                            <img src={image?.src} alt={title} loading="lazy" />
                             <p className="w-36 vreak-words text-sm mt-2">
                                 {title}
                             </p>
