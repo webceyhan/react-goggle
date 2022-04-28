@@ -5,7 +5,6 @@ const ResultContext = createContext();
 
 const DEV = process.env.NODE_ENV === 'development';
 const apiUrl = 'https://google-search3.p.rapidapi.com/api/v1';
-const apiKey = 'c6475d3a99msh3841d49343627f9p1b1dfbjsn091c7fa8140b';
 
 const responseTypeMap = {
     search: 'results',
@@ -37,7 +36,7 @@ export const ResultContextProvider = ({ children }) => {
                     method: 'GET',
                     headers: {
                         'X-RapidAPI-Host': 'google-search3.p.rapidapi.com',
-                        'X-RapidAPI-Key': apiKey,
+                        'X-RapidAPI-Key': process.env.REACT_APP_API_KEY,
                     },
                 }
             );
