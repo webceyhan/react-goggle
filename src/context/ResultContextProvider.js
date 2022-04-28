@@ -32,7 +32,7 @@ export const ResultContextProvider = ({ children }) => {
 
         const data = await response.json();
 
-        setResults(data[responseTypeMap[type]]);
+        setResults(data[responseTypeMap[type]] ?? []);
         setLoading(false);
     };
 
