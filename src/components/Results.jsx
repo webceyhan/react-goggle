@@ -17,9 +17,9 @@ export const Results = () => {
     switch (location.pathname) {
         case '/search':
             return (
-                <div className="flex flex-wrap justify-center space-y-5 sm:px-5">
+                <div className="flex flex-wrap justify-center sm:mx-auto">
                     {results.map(({ link, title }, index) => (
-                        <div className="md:w-2/3 w-full" key={index}>
+                        <div className="md:w-3/5 w-full p-2" key={index}>
                             <a href={link} target="_blank" rel="noreferrer">
                                 {/* 
                                     bugfix: 
@@ -71,9 +71,9 @@ export const Results = () => {
 
         case '/news':
             return (
-                <div className="flex flex-wrap justify-center space-y-5 sm:px-5">
+                <div className="flex flex-wrap justify-center">
                     {results.map(({ link, source, title }, index) => (
-                        <div className="md:w-2/5 w-full px-5" key={index}>
+                        <div className="md:w-2/5 w-full py-3 px-5" key={index}>
                             <a
                                 href={link}
                                 target="_blank"
