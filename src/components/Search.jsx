@@ -14,7 +14,7 @@ export const Search = () => {
     }, [debouncedTerm, setSearchTerm, term]);
 
     return (
-        <div className="relative sm:ml-48 md:ml-72 sm:mt-10 mt-3">
+        <div className="relative sm:ml-48 md:ml-72">
             <input
                 type="text"
                 value={term}
@@ -31,7 +31,6 @@ export const Search = () => {
                     x
                 </button>
             )}
-
             <Links />
         </div>
     );
