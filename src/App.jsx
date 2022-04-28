@@ -10,7 +10,9 @@ export const App = () => {
         <div className={darkTheme ? 'dark' : ''}>
             <div className="dark:bg-gray-900 bg-gray-100 dark:text-gray-200 min-h-screen">
                 <Navbar darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
-                <Outlet />
+                <div className="my-5">
+                    <Outlet />
+                </div>
                 <Footer />
             </div>
         </div>
