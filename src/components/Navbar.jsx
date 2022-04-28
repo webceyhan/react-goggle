@@ -3,14 +3,16 @@ import { Search } from './Search';
 
 export const Navbar = ({ darkTheme, setDarkTheme }) => {
     return (
-        <div className="flex flex-wrap justify-center items-start border-b dark:border-gray-700 border-gray-200 p-5 pb-0">
-            <Link
-                to="/"
-                className="text-3xl text-slate-600 dark:text-white p-0.5"
-            >
-                Goggle
-            </Link>
-            <Search />
+        <div className="flex flex-wrap justify-between items-start border-b dark:border-gray-700 border-gray-200 p-10 pb-0">
+            <div className="flex">
+                <Link
+                    to="/"
+                    className="text-3xl text-slate-600 dark:text-white p-0.5"
+                >
+                    Goggle
+                </Link>
+                <Search />
+            </div>
             <button
                 type="button"
                 onClick={() => setDarkTheme(!darkTheme)}

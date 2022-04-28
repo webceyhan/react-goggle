@@ -17,9 +17,9 @@ export const Results = () => {
     switch (location.pathname) {
         case '/search':
             return (
-                <div className="flex flex-wrap justify-center sm:mx-auto">
+                <div className="flex flex-wrap">
                     {results.map(({ link, title }, index) => (
-                        <div className="md:w-3/5 w-full p-2" key={index}>
+                        <div className="md:w-3/5 w-full sm:p-3 p-4" key={index}>
                             <a href={link} target="_blank" rel="noreferrer">
                                 {/* 
                                     bugfix: 
@@ -46,10 +46,10 @@ export const Results = () => {
 
         case '/image':
             return (
-                <div className="flex flex-wrap justify-center items-start">
+                <div className="flex flex-wrap items-start">
                     {results.map(({ image, link: { href, title } }, index) => (
                         <a
-                            className="sm:p-3 p-5"
+                            className="sm:p-3 p-4"
                             href={href}
                             key={index}
                             target="_blank"
@@ -71,9 +71,9 @@ export const Results = () => {
 
         case '/news':
             return (
-                <div className="flex flex-wrap justify-center">
+                <div className="flex flex-wrap">
                     {results.map(({ link, source, title }, index) => (
-                        <div className="md:w-2/5 w-full py-3 px-5" key={index}>
+                        <div className="md:w-2/5 w-full sm:p-3 p-5" key={index}>
                             <a
                                 href={link}
                                 target="_blank"
@@ -100,9 +100,9 @@ export const Results = () => {
 
         case '/video':
             return (
-                <div className="flex flex-wrap justify-center space-y-5 sm:px-5">
+                <div className="flex flex-wrap">
                     {results.map(({ link }, index) => (
-                        <div className="p-2" key={index}>
+                        <div className="sm:p-3 p-5" key={index}>
                             <ReactPlayer
                                 url={link}
                                 controls
