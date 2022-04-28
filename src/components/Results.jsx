@@ -6,12 +6,11 @@ import { Loading } from './Loading';
 
 export const Results = () => {
     const location = useLocation();
-    const { results, loading, searchTerm, setSearchTerm, fetchResults } =
-        useResultContext();
+    const { results, loading, searchTerm, fetchResults } = useResultContext();
 
     useEffect(() => {
         fetchResults(searchTerm, location.pathname.slice(1));
-    }, [location.pathname]);
+    }, [location.pathname, searchTerm]);
 
     if (loading) return <Loading />;
 
