@@ -19,16 +19,21 @@ export const ResultContextProvider = ({ children }) => {
 
     // type: 'search' | 'images' | 'news' | 'videos'
     const fetchResults = async (query, type = 'search') => {
+        // skip if query is empty
+        if (query === '') return setResults([]);
+
         setLoading(true);
 
-
-        const response = await fetch(`${apiUrl}/${type}/q=${encodeURIComponent(query)}`, {
-            method: 'GET',
-            headers: {
-                'X-RapidAPI-Host': 'google-search3.p.rapidapi.com',
-                'X-RapidAPI-Key': apiKey,
-            },
-        });
+        const response = await fetch(
+            `${apiUrl}/${type}/q=${encodeURIComponent(query)}`,
+            {
+                method: 'GET',
+                headers: {
+                    'X-RapidAPI-Host': 'google-search3.p.rapidapi.com',
+                    'X-RapidAPI-Key': apiKey,
+                },
+            }
+        );
 
         const data = await response.json();
 
