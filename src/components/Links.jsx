@@ -9,17 +9,17 @@ const links = [
 
 export const Links = () => {
     return (
-        <div className="flex sm:justify-around justify-between items-center mt-3">
+        <div className="flex sm:justify-around justify-between items-center mt-2">
             {links.map(({ url, text }, index) => (
                 <NavLink
                     key={index}
                     to={url}
                     className={({ isActive }) => {
                         const classes =
-                            ' dark:text-blue-300 border-b-2 hover:border-blue-700 p-2 mx-1';
+                            ' dark:text-blue-300 border-b-2 hover:border-blue-700 py-1 px-3';
                         return isActive
                             ? `${classes} border-blue-700`
-                            : classes;
+                            : `${classes} border-transparent`;
                     }}
                 >
                     {text}
