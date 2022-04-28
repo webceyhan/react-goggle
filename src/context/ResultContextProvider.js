@@ -15,7 +15,7 @@ const responseTypeMap = {
 export const ResultContextProvider = ({ children }) => {
     const [results, setResults] = useState([]);
     const [loading, setLoading] = useState(false);
-    const [searchTerm, setSearchTerm] = useState('trump');
+    const [searchTerm, setSearchTerm] = useState('');
 
     // type: 'search' | 'images' | 'news' | 'videos'
     const fetchResults = async (query, type = 'search') => {
