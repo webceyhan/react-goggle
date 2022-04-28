@@ -17,7 +17,7 @@ export const Results = () => {
     switch (location.pathname) {
         case '/search':
             return (
-                <div className="flex flex-wrap justify-center spae-y-6 sm:px-56">
+                <div className="flex flex-wrap justify-center space-y-5 sm:px-5">
                     {results?.map(({ link, title }, index) => (
                         <div className="md:w-2/3 w-full" key={index}>
                             <a href={link} target="_blank" rel="noreferrer">
@@ -59,7 +59,7 @@ export const Results = () => {
 
         case '/news':
             return (
-                <div className="flex flex-wrap justify-center spae-y-6 sm:px-56">
+                <div className="flex flex-wrap justify-center space-y-5 sm:px-5">
                     {results?.map(({ link, id, source, title }, index) => (
                         <div className="md:w-2/5 w-full" key={index}>
                             <a
@@ -68,7 +68,7 @@ export const Results = () => {
                                 rel="noreferrer"
                                 className="hover:underline"
                             >
-                                <p className="text-lg dark:text-blue-300 text-blue-700">
+                                <p className="text-md dark:text-blue-300 text-blue-700">
                                     {title}
                                 </p>
                             </a>
@@ -88,7 +88,7 @@ export const Results = () => {
 
         case '/video':
             return (
-                <div className="flex flex-wrap">
+                <div className="flex flex-wrap space-y-5 sm:px-5">
                     {results?.map(({ link }, index) => (
                         <div className="p-2" key={index}>
                             <ReactPlayer
