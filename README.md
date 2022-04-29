@@ -10,6 +10,8 @@
 
 A Google search clone inspired by a tutorial to demonstrate the basics of React framework and its core concepts.
 
+It utilizes the [React Hooks](https://reactjs.org/docs/hooks-intro.html) and [React Router](https://reacttraining.com/react-router/web/api/BrowserRouter) to create a simple search application based on the data which is provided by RapidAPI. And the search results are displayed using Tailwind CSS.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 [View Demo](https://ceyhan.io/react-goggle/) |
@@ -99,7 +101,9 @@ A GitHub Action will automatically deploy the project to Netlify on every push.
 
 -   [Node.js](https://nodejs.dev/)
 -   [React](https://reactjs.org/)
--   [Bootstrap](https://getbootstrap.com)
+-   [React Router](https://reactrouter.com/)
+-   [Tailwind CSS](https://tailwindcss.com/)
+-   [RapidAPI](https://rapidapi.com/)
 -   [GitHub Actions](https://docs.github.com/en/actions)
     -   [Netlify](https://www.netlify.com/)
     -   [Netlify Actions](https://github.com/nwtgck/actions-netlify)
