@@ -1,7 +1,11 @@
 import { sampleResponses } from './sample';
 
-const IS_DEV = process.env.NODE_ENV === 'development';
+// force DEV env to use sample data (RapidApi free plan expired)
+// TODO: remove this when we have real data
+const IS_DEV = process.env.NODE_ENV === 'development' || true;
+
 const API_URL = 'https://google-search3.p.rapidapi.com/api/v1';
+
 const HEADERS = {
     'X-RapidAPI-Key': process.env.REACT_APP_API_KEY,
     'X-RapidAPI-Host': 'google-search3.p.rapidapi.com',
