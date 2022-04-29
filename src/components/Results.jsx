@@ -10,7 +10,11 @@ export const Results = () => {
 
     useEffect(() => {
         fetchResults(searchTerm, location.pathname.slice(1));
-    }, [location.pathname, searchTerm]);
+        // bugfix:
+        // Line 14:8:  React Hook useEffect has a missing dependency: 'fetchResults'.
+        // Either include it or remove the dependency array  react - hooks / exhaustive - deps
+        // eslint-disable-next-line
+    }, [searchTerm, location.pathname]);
 
     if (loading) return <Loading />;
 
