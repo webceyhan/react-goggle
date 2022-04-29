@@ -306,7 +306,7 @@ const videoResponse = {
     ],
 };
 
-export const responses = {
+export const sampleResponses = {
     search: searchResponse,
     image: imageResponse,
     video: videoResponse,
