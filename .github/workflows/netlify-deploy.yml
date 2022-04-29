@@ -9,9 +9,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
       - uses: actions/checkout@v2
 
-      - name: Deploy to Netlify
+      - name: Install and Build
+        run: |
+          npm ci
+          npm run build
+
+      - name: Deploy
         uses: nwtgck/actions-netlify@v1.2
         with:
           publish-dir: './build'          
