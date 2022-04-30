@@ -6,7 +6,7 @@
 
 <!-- HEADER ///////////////////////////////////////////////////////////// -->
 
-# React Google Search Clone
+# Google Search Clone + React + TailwindCSS
 
 A Google search clone inspired by a tutorial to demonstrate the basics of React framework and its core concepts.
 
