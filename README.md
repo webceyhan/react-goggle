@@ -14,7 +14,7 @@ It utilizes the [React Hooks](https://reactjs.org/docs/hooks-intro.html) and [Re
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-[View Demo](https://react-goggle-app.netlify.app/) |
+[View Demo](https://webceyhan-react-goggle.netlify.app/) |
 [Report Issue](https://github.com/webceyhan/react-goggle/issues) |
 [Request Feature](https://github.com/webceyhan/react-goggle/pulls) |
 [@webceyhan](https://twitter.com/webceyhan)
